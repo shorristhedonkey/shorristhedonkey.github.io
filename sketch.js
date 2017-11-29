@@ -14,7 +14,7 @@ function setup() {
  var canvas = createCanvas(500, 500); //Use this function to define the size of the output window
   //canvas.position(windowWidth/2 - width/2, height/12);
   canvas.parent("myContainer");
-  //background(200, 0 , 0);
+  background(169, 169, 169);
  x = (width/2);
  y = (height/2);
  speedX = random(-1., 5.);
@@ -24,7 +24,7 @@ function setup() {
  
 
 function draw() {
-background(200, 0 , 0);
+//background(200, 0 , 0);
 	x += speedX;
 	y += speedY;
 if (x + 25>width) {
@@ -55,6 +55,6 @@ if (y - 25<00) {
 		fill(r, g, b);
 		ellipse(x, y, 50, 50);
 	pop();
-text(round(x), x + 27, y - 3);
-text(round(y), x + 27, y + 14);
+//text(round(x), x + 27, y - 3);
+//text(round(y), x + 27, y + 14);
 	}
