@@ -18,7 +18,7 @@
 	  function setup() { // the setup function, used for calculating stuff 
 	  createCanvas(594, 841); //Use this function to define the size of the output window
 	  textSize(32);		   // sets the text size, wh
-	  frameRate(7);		  // sets the frame rate
+	  frameRate(30);		  // sets the frame rate
 	  grid(); 		     // sets up the grid arrays, boxesX & boxesY
 	  //gridDebug();		// visualises the grid
 	  background(random(255), random(255), random(255)); // sets random background colour
