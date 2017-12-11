@@ -24,15 +24,15 @@
 	  background(random(255), random(255), random(255)); // sets random background colour
 	   //      to add to the starting positions every frame so they can move
 	  boxes[0] = new box(boxPosX, boxPosY, speedX, speedY);
-	  boxes[1] = new box(boxPosX + 2, boxPosY, speedX, speedY);		    // creating all the 10 boxes as variables in the "boxes" array:
+	  boxes[1] = new box(boxPosX + 2, boxPosY + 50, speedX, speedY);		    // creating all the 10 boxes as variables in the "boxes" array:
 	  boxes[2] = new box(boxPosX + 4, boxPosY, speedX, speedY);		   //each one of these boxes instantiates a new instance of the class
-	  boxes[3] = new box(boxPosX + 6, boxPosY, speedX, speedY);		  //"box" and assigns it to a variable in the array "boxes"
-	  boxes[4] = new box(boxPosX + 8, boxPosY, speedX, speedY);		 //they all call on the boxPosX and boxPosY variables for their
-	  boxes[5] = new box(boxPosX + 10, boxPosY, speedX, speedY);	//starting positions and they call on speedX and speedY to
+	  boxes[3] = new box(boxPosX + 6, boxPosY + 50, speedX, speedY);		  //"box" and assigns it to a variable in the array "boxes"
+	  boxes[4] = new box(boxPosX + 8, boxPosY , speedX, speedY);		 //they all call on the boxPosX and boxPosY variables for their
+	  boxes[5] = new box(boxPosX + 10, boxPosY + 50, speedX, speedY);	//starting positions and they call on speedX and speedY to
 	  boxes[6] = new box(boxPosX + 12, boxPosY, speedX, speedY);   //add to the starting positions every frame so they can move
-	  boxes[7] = new box(boxPosX + 14, boxPosY, speedX, speedY);  //the positions of these boxes all differ by 2 squares, this creates
+	  boxes[7] = new box(boxPosX + 14, boxPosY + 50, speedX, speedY);  //the positions of these boxes all differ by 2 squares, this creates
 	  boxes[8] = new box(boxPosX + 16, boxPosY, speedX, speedY); //the dithering effect.
-	  boxes[9] = new box(boxPosX + 18, boxPosY, speedX, speedY);
+	  boxes[9] = new box(boxPosX + 18, boxPosY + 50, speedX, speedY);
 
 	  }//end of the setup function
 	  
@@ -43,7 +43,7 @@
 		   // but each subsiquent box will haev its position shifted along the x axis by 2, as shown when the variables are being declared in setup
 			boxes[0].boxMovement();
 			boxes[0].boxDraw();
-			
+		
 			boxes[1].boxMovement();
 			boxes[1].boxDraw();
 			
@@ -70,6 +70,7 @@
 			
 			boxes[9].boxMovement();
 			boxes[9].boxDraw();
+			
 		}//end of the draw function
 		
 			function grid(){ //creating the function "grid"
@@ -98,8 +99,7 @@
 			
 			class box{// creating the class "box"
 				constructor(x, y, speedXbox, speedYbox){ //setting 4 values that the class will take when called
-					//setting up variables for the class
-					this.x = x;
+					this.x = x; //setting up variables for the class
 					this.y = y;
 					this.speedXbox = speedXbox;
 					this.speedYbox = speedYbox;
@@ -133,9 +133,6 @@
 									r = random(255);   //randomizes the Red colour of the rgb spectrum through a variable declared at the start called "r"
 									g = random(255);  //randomizes the green colour of the rgb spectrum through a variable declared at the start called "g"
  									b = random(255); //randomizes the blue colour of the rgb spectrum through a variable declared at the start called "b"
-								} 
-							
-							
+								} 							
 						}
-						
 			}//ends the box class
